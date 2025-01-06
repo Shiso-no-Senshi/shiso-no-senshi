@@ -1,0 +1,33 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig.json",
+	"compilerOptions": {
+		"allowArbitraryExtensions": true,
+		"allowJs": true,
+		"allowUnusedLabels": false,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"exactOptionalPropertyTypes": true,
+		"forceConsistentCasingInFileNames": true,
+		"lib": ["esnext", "DOM", "DOM.Iterable"],
+		"module": "ES2022",
+		"moduleResolution": "bundler",
+		"noErrorTruncation": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUncheckedSideEffectImports": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "ES2022",
+		"useUnknownInCatchVariables": true,
+		"verbatimModuleSyntax": true
+	},
+	"extends": "./.svelte-kit/tsconfig.json",
+	"include": ["./src/**/*.ts", "./src/**/*.svelte"]
+}
