@@ -1,0 +1,7 @@
+{
+	"$schema": "../gen/schemas/capabilities.json",
+	"identifier": "application",
+	"description": "Capability for the entire application on any platform",
+	"windows": ["*"],
+	"permissions": ["core:default", "opener:default", "log:default", "os:default", "os:allow-hostname"]
+}

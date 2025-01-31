@@ -1,0 +1,5 @@
+{
+	"$schema": "../gen/schemas/macOS-schema.json",
+	"identifier": "macOS",
+	"permissions": ["core:app:default"]
+}

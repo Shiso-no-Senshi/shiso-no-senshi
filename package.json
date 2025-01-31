@@ -28,20 +28,24 @@
 		"tauri": "tauri"
 	},
 	"dependencies": {
+		"@tailwindcss/vite": "^4.0.1",
 		"@tauri-apps/api": "^2.2.0",
-		"@tauri-apps/plugin-log": "~2.2.0",
-		"@tauri-apps/plugin-opener": "^2.2.4",
+		"@tauri-apps/plugin-biometric": "~2.2.0",
+		"@tauri-apps/plugin-log": "~2.2.1",
+		"@tauri-apps/plugin-opener": "^2.2.5",
 		"@tauri-apps/plugin-os": "~2.2.0",
-		"@tauri-apps/plugin-window-state": "~2.2.0"
+		"@tauri-apps/plugin-window-state": "~2.2.1",
+		"dockview-core": "^3.0.2",
+		"tailwindcss": "^4.0.1"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.15.2",
+		"@sveltejs/kit": "^2.16.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
-		"@tauri-apps/cli": "^2.2.4",
-		"svelte": "^5.17.3",
+		"@tauri-apps/cli": "^2.2.7",
+		"svelte": "^5.19.6",
 		"svelte-check": "^4.1.4",
-		"typescript": "~5.6.3",
-		"vite": "^6.0.7"
+		"typescript": "~5.7.3",
+		"vite": "^6.0.11"
 	}
 }

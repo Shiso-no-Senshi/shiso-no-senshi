@@ -1,0 +1,5 @@
+{
+	"$schema": "../gen/schemas/linux-schema.json",
+	"identifier": "linux",
+	"permissions": ["core:app:default"]
+}

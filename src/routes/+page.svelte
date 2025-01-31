@@ -1,18 +1,40 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { TreeView } from '$lib/panels/TreeView';
+	import { createDockview, DockviewApi } from 'dockview-core';
+	import { onMount } from 'svelte';
 
 	let { data }: { data: PageData } = $props();
+
+	let api: DockviewApi;
+	let rootElement: HTMLElement;
+
+	onMount(() => {
+		let rootEl = document.getElementById('root');
+		if (!rootEl) {
+			rootEl = document.createElement('div');
+			rootEl.id = 'root';
+			document.body.appendChild(rootEl);
+		}
+		rootElement = rootEl;
+
+		api = createDockview(rootElement, {
+			className: 'dockview-theme',
+			createComponent: (options) => {
+				switch (options.name) {
+					case 'TreeView':
+						return new TreeView();
+				}
+				throw new Error(`Invalid panel type: ${options.name}`);
+			},
+		});
+
+		api.addPanel({
+			id: 'treeView',
+			component: 'TreeView',
+			title: 'Hello World!',
+		});
+	});
 </script>
 
-<main class="container">
-	<h1>Shisō no Senshi</h1>
-	<h2>Loading...</h2>
-	<div>
-		<h3>Environment</h3>
-		<div>Architecture: {data.os.architecture}</div>
-		<div>Operating System: {data.os.platform} v{data.os.version}</div>
-		<div>Hostname: {data.os.hostname}</div>
-		<div>End of Line: {data.os.eol == '\n' ? 'Posix' : 'Windows'}</div>
-		<div>Locale: {data.os.locale}</div>
-	</div>
-</main>
+<div id="root"></div>

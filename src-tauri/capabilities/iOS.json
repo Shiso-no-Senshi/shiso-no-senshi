@@ -1,0 +1,5 @@
+{
+	"$schema": "../gen/schemas/iOS-schema.json",
+	"identifier": "iOS",
+	"permissions": ["core:app:default"]
+}

@@ -1,0 +1,5 @@
+{
+	"$schema": "../gen/schemas/windows-schema.json",
+	"identifier": "windows",
+	"permissions": ["core:app:default"]
+}
