@@ -1,9 +1,11 @@
 {
-	"svelte.enable-ts-plugin": true,
 	"[markdown]": {
-		"editor.formatOnSave": false,
 		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
 		"editor.formatOnType": false
 	},
-	"css.customData": [".vscode/tailwind.json"]
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"svelte.enable-ts-plugin": true
 }

@@ -1,40 +1,25 @@
 <script lang="ts">
-	import type { PageData } from './$types';
-	import { TreeView } from '$lib/panels/TreeView';
-	import { createDockview, DockviewApi } from 'dockview-core';
+	//import type { PageData } from './$types';
 	import { onMount } from 'svelte';
+	import { Dock } from '@shiso-no-senshi/sanbashi-no-senshi';
 
-	let { data }: { data: PageData } = $props();
+	//let { _data }: { data: PageData } = $props();
 
-	let api: DockviewApi;
+	//let _dock: Dock;
 	let rootElement: HTMLElement;
 
 	onMount(() => {
 		let rootEl = document.getElementById('root');
 		if (!rootEl) {
+			console.info('Root element not found, creating');
 			rootEl = document.createElement('div');
 			rootEl.id = 'root';
 			document.body.appendChild(rootEl);
 		}
 		rootElement = rootEl;
 
-		api = createDockview(rootElement, {
-			className: 'dockview-theme',
-			createComponent: (options) => {
-				switch (options.name) {
-					case 'TreeView':
-						return new TreeView();
-				}
-				throw new Error(`Invalid panel type: ${options.name}`);
-			},
-		});
-
-		api.addPanel({
-			id: 'treeView',
-			component: 'TreeView',
-			title: 'Hello World!',
-		});
+		new Dock(rootElement);
 	});
 </script>
 
-<div id="root"></div>
+<div id="root" class="container"></div>

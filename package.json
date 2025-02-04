@@ -28,24 +28,35 @@
 		"tauri": "tauri"
 	},
 	"dependencies": {
-		"@tailwindcss/vite": "^4.0.1",
+		"@shiso-no-senshi/sanbashi-no-senshi": "link:../sanbashi-no-senshi",
+		"@tailwindcss/vite": "^4.0.3",
 		"@tauri-apps/api": "^2.2.0",
 		"@tauri-apps/plugin-biometric": "~2.2.0",
 		"@tauri-apps/plugin-log": "~2.2.1",
 		"@tauri-apps/plugin-opener": "^2.2.5",
 		"@tauri-apps/plugin-os": "~2.2.0",
 		"@tauri-apps/plugin-window-state": "~2.2.1",
-		"dockview-core": "^3.0.2",
-		"tailwindcss": "^4.0.1"
+		"tailwindcss": "^4.0.3"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.16.1",
+		"@sveltejs/kit": "^2.17.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tauri-apps/cli": "^2.2.7",
-		"svelte": "^5.19.6",
+		"svelte": "^5.19.7",
 		"svelte-check": "^4.1.4",
 		"typescript": "~5.7.3",
 		"vite": "^6.0.11"
+	},
+	"pnpm": {
+		"overrides": {
+			"@shiso-no-senshi/sanbashi-no-senshi": "link:../sanbashi-no-senshi"
+		},
+		"ignoredBuiltDependencies": [
+			"esbuild"
+		],
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }

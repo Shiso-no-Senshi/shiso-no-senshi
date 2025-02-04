@@ -1,7 +1,18 @@
 @import 'tailwindcss';
-@import './styles/dock-theme.css';
+@import './styles/dockview.css';
 
-html {
-	@apply bg-blue-950;
-	@apply text-gray-50;
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+div.container {
+	display: block;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
