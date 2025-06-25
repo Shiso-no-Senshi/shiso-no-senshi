@@ -1,8 +1,9 @@
 {
-	"svelte.enable-ts-plugin": true,
-	"[markdown]": {
-		"editor.formatOnSave": false,
-		"editor.formatOnPaste": false,
-		"editor.formatOnType": false
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"tailwindCSS.experimental.classRegex": ["class: \"(.*)\""],
+	"tailwindCSS.includeLanguages": {
+		"rust": "html"
 	}
 }

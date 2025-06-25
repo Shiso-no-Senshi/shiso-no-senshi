@@ -1,47 +1,25 @@
 {
-	"name": "shiso-no-senshi",
-	"version": "0.1.0",
-	"description": "Shisō no Senshi (lit. Warrior of Thought) is a cross platform, free, open source, customizable knowledge management platform.",
-	"authors": [
-		"JEleniel (https://github.com/JEleniel)"
-	],
-	"keywords": [
-		"note"
-	],
-	"homepage": "https://github.com/Shiso-no-senshi/shiso-no-senshi",
-	"bugs": {
-		"url": "https://github.com/Shiso-no-senshi/shiso-no-senshi/issues"
+	"$schema": "https://json.schemastore.org/package.json",
+	"author": {
+		"email": "jeleniel@crystultima.org",
+		"name": "JEleniel",
+		"url": "https://github.com/JEleniel"
 	},
-	"repository": {
-		"type": "github",
-		"url": "https://github.com/Shiso-no-senshi/shiso-no-senshi.git"
+	"dependencies": {},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.1.10",
+		"prettier": "^3.6.0",
+		"prettier-plugin-tailwindcss": "^0.6.13",
+		"tailwindcss": "^4.1.10"
 	},
 	"license": "GPL-3.0-or-later",
-	"type": "module",
+	"name": "shiso-no-senshi",
+	"private": true,
 	"scripts": {
-		"preinstall": "npx only-allow pnpm",
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"tauri": "tauri"
+		"build": "dx clean && pnpm tailwind && dx build",
+		"bundle": "pnpm build && dx bundle",
+		"dev": "dx clean && pnpm tailwind && dx serve",
+		"tailwind": "pnpx @tailwindcss/cli -i ./assets/main.css -o ./assets/compiled.css"
 	},
-	"dependencies": {
-		"@tauri-apps/api": "^2",
-		"@tauri-apps/plugin-log": "~2",
-		"@tauri-apps/plugin-opener": "^2",
-		"@tauri-apps/plugin-os": "~2",
-		"@tauri-apps/plugin-window-state": "~2"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-static": "^3.0.6",
-		"@sveltejs/kit": "^2.9.0",
-		"@sveltejs/vite-plugin-svelte": "^5.0.0",
-		"@tauri-apps/cli": "^2",
-		"svelte": "^5.0.0",
-		"svelte-check": "^4.0.0",
-		"typescript": "~5.6.2",
-		"vite": "^6.0.3"
-	}
+	"version": "0.1.0-alpha.1"
 }
