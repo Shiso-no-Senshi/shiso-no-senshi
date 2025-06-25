@@ -1,23 +1,17 @@
 # Shisō no Senshi
 
+<div style="text-align: center;"><img src="docs/images/logo.svg" style="width: 64px; height: 64px;" alt="" /></div>
+
+---
+
 <!-- PROJECT SHIELDS -->
 <div style="margin: auto; text-align: center;">
 
-[![	Contributors](https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge)](https://github.com/github_username/repo_name/graphs/contributors)
-
-[![Forks](https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge)](https://github.com/github_username/repo_name/network/members)
-
-[![Stargazers](https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge)](https://github.com/github_username/repo_name/stargazers)
-
-[![Issues](https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge)](https://github.com/github_username/repo_name/issues)
-
-[![project_license](https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge)](LICENSE.md)
-
-</div>
-
-<div style="margin: auto; text-align: center;">
-
-  <img src="docs/images/logo.svg" style="width: 64px; height: 64px;" alt="" />
+[![	Contributors](https://img.shields.io/github/contributors/Shiso-no-Senshi/shiso-no-senshi.svg?style=for-the-badge)](https://github.com/Shiso-no-Senshi/shiso-no-senshi/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/Shiso-no-Senshi/shiso-no-senshi.svg?style=for-the-badge)](https://github.com/Shiso-no-Senshi/shiso-no-senshi/network/members)
+[![Stargazers](https://img.shields.io/github/stars/Shiso-no-Senshi/shiso-no-senshi.svg?style=for-the-badge)](https://github.com/Shiso-no-Senshi/shiso-no-senshi/stargazers)
+[![Issues](https://img.shields.io/github/issues/Shiso-no-Senshi/shiso-no-senshi.svg?style=for-the-badge)](https://github.com/Shiso-no-Senshi/shiso-no-senshi/issues)
+[![project_license](https://img.shields.io/github/license/Shiso-no-Senshi/shiso-no-senshi.svg?style=for-the-badge)](LICENSE.md)
 
 </div>
 
