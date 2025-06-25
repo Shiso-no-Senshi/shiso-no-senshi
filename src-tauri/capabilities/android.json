@@ -1,5 +1,0 @@
-{
-	"$schema": "../gen/schemas/android-schema.json",
-	"identifier": "android",
-	"permissions": ["core:app:default"]
-}

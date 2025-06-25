@@ -1,62 +1,25 @@
 {
-	"name": "shiso-no-senshi",
-	"version": "0.1.0",
-	"description": "Shisō no Senshi (lit. Warrior of Thought) is a cross platform, free, open source, customizable knowledge management platform.",
-	"authors": [
-		"JEleniel (https://github.com/JEleniel)"
-	],
-	"keywords": [
-		"note"
-	],
-	"homepage": "https://github.com/Shiso-no-senshi/shiso-no-senshi",
-	"bugs": {
-		"url": "https://github.com/Shiso-no-senshi/shiso-no-senshi/issues"
+	"$schema": "https://json.schemastore.org/package.json",
+	"author": {
+		"email": "jeleniel@crystultima.org",
+		"name": "JEleniel",
+		"url": "https://github.com/JEleniel"
 	},
-	"repository": {
-		"type": "github",
-		"url": "https://github.com/Shiso-no-senshi/shiso-no-senshi.git"
+	"dependencies": {},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.1.10",
+		"prettier": "^3.6.0",
+		"prettier-plugin-tailwindcss": "^0.6.13",
+		"tailwindcss": "^4.1.10"
 	},
 	"license": "GPL-3.0-or-later",
-	"type": "module",
+	"name": "shiso-no-senshi",
+	"private": true,
 	"scripts": {
-		"preinstall": "npx only-allow pnpm",
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"tauri": "tauri"
+		"build": "dx clean && pnpm tailwind && dx build",
+		"bundle": "pnpm build && dx bundle",
+		"dev": "dx clean && pnpm tailwind && dx serve",
+		"tailwind": "pnpx @tailwindcss/cli -i ./assets/main.css -o ./assets/compiled.css"
 	},
-	"dependencies": {
-		"@shiso-no-senshi/sanbashi-no-senshi": "link:../sanbashi-no-senshi",
-		"@tailwindcss/vite": "^4.0.3",
-		"@tauri-apps/api": "^2.2.0",
-		"@tauri-apps/plugin-biometric": "~2.2.0",
-		"@tauri-apps/plugin-log": "~2.2.1",
-		"@tauri-apps/plugin-opener": "^2.2.5",
-		"@tauri-apps/plugin-os": "~2.2.0",
-		"@tauri-apps/plugin-window-state": "~2.2.1",
-		"tailwindcss": "^4.0.3"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.17.1",
-		"@sveltejs/vite-plugin-svelte": "^5.0.3",
-		"@tauri-apps/cli": "^2.2.7",
-		"svelte": "^5.19.7",
-		"svelte-check": "^4.1.4",
-		"typescript": "~5.7.3",
-		"vite": "^6.0.11"
-	},
-	"pnpm": {
-		"overrides": {
-			"@shiso-no-senshi/sanbashi-no-senshi": "link:../sanbashi-no-senshi"
-		},
-		"ignoredBuiltDependencies": [
-			"esbuild"
-		],
-		"onlyBuiltDependencies": [
-			"esbuild"
-		]
-	}
+	"version": "0.1.0-alpha.1"
 }

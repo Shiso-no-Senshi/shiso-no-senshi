@@ -1,0 +1,14 @@
+[application]
+
+[web.app]
+title = "Shisō no Senshi"
+
+[web.resource]
+
+style = []
+
+script = []
+
+[web.resource.dev]
+
+script = []
