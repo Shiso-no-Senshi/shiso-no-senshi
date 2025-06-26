@@ -1,14 +1,19 @@
 [application]
+name = "Shisō no Senshi"
 
 [web.app]
 title = "Shisō no Senshi"
 
+[web.watcher]
+reload_html = true
+watch_path = ["src", "asseets"]
+
 [web.resource]
-
-style = []
-
+style = ["./assets/compiled.css"]
 script = []
 
 [web.resource.dev]
-
 script = []
+
+[bundle]
+identifier = "Shiso-no-Senshi"

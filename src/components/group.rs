@@ -1,19 +1,35 @@
+#![allow(non_snake_case)]
+
 use dioxus::prelude::*;
 
-use super::panel::PanelProps;
+use super::panel::Panel;
 
-#[derive(Props,PartialEq,Clone)]
-pub struct GroupProps {
-	panels: Vec<PanelProps<>
+pub struct Group {
+    panels: Vec<Panel>,
 }
 
-#[component]
-pub fn Group() -> Element {
-    rsx! {
-        div {
-            class: "group",
-            GroupHeader{ }
+impl Group {
+    pub fn new() -> Self {
+        Self { panels: vec![] }
+    }
 
+    pub fn add_panel(self: &mut Self, panel: Panel) {
+        self.panels.push(panel);
+    }
+
+    pub fn remove_panel(self: &mut Self, panel: Panel) {
+        self.panels.remove(
+            self.panels
+                .iter()
+                .position(|p| p.id() == panel.id())
+                .unwrap(),
+        );
+    }
+
+    pub fn Group(&self) -> Element {
+        rsx! {
+            GroupHeader { tab_titles: self.panels.iter().map(|panel| panel.title.clone()).collect() }
+            div { class: "group", {self.panels.iter().map(|panel| panel.Panel())} }
         }
     }
 }
@@ -21,9 +37,10 @@ pub fn Group() -> Element {
 #[component]
 fn GroupHeader(tab_titles: Vec<String>) -> Element {
     rsx! {
-        div {
-            class: "group-header",
-            tab_titles.map(|tab_title| rsx!{Tab { title: tab_title }})
+        div { class: "group-header",
+            {tab_titles.iter().map(|tab_title| rsx! {
+                Tab { title: tab_title }
+            })}
         }
     }
 }
@@ -35,5 +52,12 @@ fn Tab(title: String) -> Element {
             div { class: "title", "{title}" }
             TabCloseButton {}
         }
+    }
+}
+
+#[component]
+fn TabCloseButton() -> Element {
+    rsx! {
+        div { class: "tab-close-button", dangerous_inner_html: "&cross;" }
     }
 }

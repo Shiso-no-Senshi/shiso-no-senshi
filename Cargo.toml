@@ -6,6 +6,9 @@ edition = "2024"
 
 [dependencies]
 dioxus = { version = "0.6.3", features = [] }
+uuid = { version = "1.17.0", features = ["v4", "serde", "js"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1" }
 
 [features]
 default = ["web"]

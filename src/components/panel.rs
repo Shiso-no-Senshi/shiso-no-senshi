@@ -1,27 +1,32 @@
+#![allow(non_snake_case)]
+
 use dioxus::prelude::*;
+use uuid::Uuid;
 
-use super::renderer::{RenderProps, Renderer};
+use super::editor::Editor;
 
-#[derive(Props, PartialEq, Clone)]
-pub struct PanelProps<R: Renderer + PartialEq + Clone + 'static> {
-    title: String,
-    renderer: Option<R>,
-    content: String,
+pub struct Panel {
+    id: String,
+    pub title: String,
+    pub editor: Box<dyn Editor>,
 }
 
-pub fn Panel<R: Renderer + PartialEq + Clone + 'static>(props: PanelProps<R>) -> Element {
-    let mut panel_props: Signal<PanelProps<R>> = use_signal(|| props);
+impl Panel {
+    pub fn id(&self) -> String {
+        self.id.clone()
+    }
 
-    let render_props: RenderProps = RenderProps {
-        content: panel_props.read().content.clone(),
-    };
+    pub fn new(title: String, editor: Box<dyn Editor>) -> Self {
+        Self {
+            id: Uuid::new_v4().to_string(),
+            title,
+            editor,
+        }
+    }
 
-    match &panel_props.read().renderer {
-        Some(renderer) => renderer.render(render_props),
-        None => {
-            rsx! {
-                div {}
-            }
+    pub fn Panel(self: &Self) -> Element {
+        rsx! {
+            div { class: "panel", {self.editor.Editor()} }
         }
     }
 }

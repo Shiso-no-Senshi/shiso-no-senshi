@@ -6,19 +6,26 @@ body {
 }
 
 header {
-	@apply m-1 rounded-bl-2xl p-1 pr-0;
+	@apply mb-1 flex rounded-bl-2xl pb-1;
 	@apply bg-indigo-400 text-amber-900;
 	@apply dark:bg-indigo-900 dark:text-amber-100;
+	.logo {
+		@apply m-2 shrink;
+	}
 	.title {
-		@apply p-1 pl-4 text-xl font-bold;
+		@apply grow p-1 pl-4 text-xl font-bold;
 		@apply rounded-bl-2xl;
 		@apply bg-slate-50;
 		@apply dark:bg-black;
 	}
 }
 
+div#main {
+	@apply flex h-full w-full flex-col;
+}
+
 .group {
-	@apply m-1 rounded-l-2xl p-1 pr-0;
+	@apply mb-1 rounded-l-2xl pb-1;
 	@apply bg-blue-400 text-amber-900;
 	@apply dark:bg-blue-900 dark:text-amber-100;
 }

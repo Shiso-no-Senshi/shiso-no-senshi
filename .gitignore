@@ -9,6 +9,7 @@
 **/.history/
 *.vsix
 .vscode-test
+**/.analyze/
 
 # Archive Files
 *.7z
