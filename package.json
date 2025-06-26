@@ -21,7 +21,7 @@
 		"bundle": "dx clean && pnpm build && dx bundle",
 		"dev": "dx clean && pnpm tailwind &&  dx serve --platform web",
 		"dev:desktop": "dx clean && pnpm tailwind &&  dx serve --platform desktop",
-		"tailwind": "pnpx @tailwindcss/cli -i ./assets/main.css -o ./assets/compiled.css -m"
+		"tailwind": "pnpx @tailwindcss/cli -i ./src/styles/main.css -o ./assets/compiled.css -m"
 	},
 	"version": "0.1.0-alpha.1"
 }

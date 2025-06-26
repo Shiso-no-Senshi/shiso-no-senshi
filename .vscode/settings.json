@@ -6,5 +6,6 @@
 	"tailwindCSS.includeLanguages": {
 		"rust": "html"
 	},
-	"rust-analyzer.cargo.targetDir": "./.analyze/"
+	"rust-analyzer.cargo.targetDir": "./.analyze/",
+	"idf.pythonInstallPath": "/usr/bin/python3"
 }

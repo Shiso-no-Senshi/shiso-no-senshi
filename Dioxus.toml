@@ -8,12 +8,5 @@ title = "Shisō no Senshi"
 reload_html = true
 watch_path = ["src", "asseets"]
 
-[web.resource]
-style = ["./assets/compiled.css"]
-script = []
-
-[web.resource.dev]
-script = []
-
 [bundle]
 identifier = "Shiso-no-Senshi"
