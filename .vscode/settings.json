@@ -2,10 +2,9 @@
 	"files.associations": {
 		"*.css": "tailwindcss"
 	},
+	"rust-analyzer.cargo.targetDir": "./.analyze/",
 	"tailwindCSS.experimental.classRegex": ["class: \"(.*)\""],
 	"tailwindCSS.includeLanguages": {
 		"rust": "html"
-	},
-	"rust-analyzer.cargo.targetDir": "./.analyze/",
-	"idf.pythonInstallPath": "/usr/bin/python3"
+	}
 }

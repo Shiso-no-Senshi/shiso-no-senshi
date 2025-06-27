@@ -1,8 +1,15 @@
 [package]
 name = "shiso-no-senshi"
-version = "0.1.0"
+description = "a cross platform personal knowledge manager designed from the ground up to be secure and leave complete control of your knowledge in your hands"
+version = "0.1.0-alpha.1"
 authors = ["JEleniel <jeleniel@crystultima.org> (https://github.com/JEleniel)"]
 edition = "2024"
+repository = "https://github.com/Shiso-no-Senshi/shiso-no-senshi"
+license = "GPL-3.0-or-later"
+publish = false
+
+[lints.rust]
+unsafe_code = "warn"
 
 [dependencies]
 dioxus = { version = "0.6.3", features = [] }

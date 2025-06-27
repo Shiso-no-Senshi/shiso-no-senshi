@@ -26,7 +26,7 @@ impl Panel {
 
     pub fn Panel(self: &Self) -> Element {
         rsx! {
-            div { class: "panel", {self.editor.Editor()} }
+            div { id: self.id.clone(), class: "panel", {self.editor.Editor()} }
         }
     }
 }

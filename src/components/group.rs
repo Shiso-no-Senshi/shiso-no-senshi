@@ -28,36 +28,38 @@ impl Group {
 
     pub fn Group(&self) -> Element {
         rsx! {
-			GroupHeader { tab_titles: self.panels.iter().map(|panel| panel.title.clone()).collect() }
-			div { class: "group", {self.panels.iter().map(|panel| panel.Panel())} }
-		}
+            div { class: "group",
+                GroupHeader { tab_titles: self.panels.iter().map(|panel| panel.title.clone()).collect() }
+                div { class: "panels", {self.panels.iter().map(|panel| panel.Panel())} }
+            }
+        }
     }
 }
 
 #[component]
 fn GroupHeader(tab_titles: Vec<String>) -> Element {
     rsx! {
-		div { class: "group-header",
-			{tab_titles.iter().map(|tab_title| rsx! {
-				Tab { title: tab_title }
-			})}
-		}
-	}
+        header { class: "header",
+            {tab_titles.iter().map(|tab_title| rsx! {
+                Tab { title: tab_title }
+            })}
+        }
+    }
 }
 
 #[component]
 fn Tab(title: String) -> Element {
     rsx! {
-		div { class: "tab",
-			div { class: "title", "{title}" }
-			TabCloseButton {}
-		}
-	}
+        div { class: "tab",
+            div { class: "title", "{title}" }
+            TabCloseButton {}
+        }
+    }
 }
 
 #[component]
 fn TabCloseButton() -> Element {
     rsx! {
-		div { class: "tab-close-button", dangerous_inner_html: "&cross;" }
-	}
+        button { class: "close-button", dangerous_inner_html: "&cross;" }
+    }
 }

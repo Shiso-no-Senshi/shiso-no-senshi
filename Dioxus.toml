@@ -1,12 +1,13 @@
 [application]
 name = "Shisō no Senshi"
+asset_dir = "assets/static"
 
 [web.app]
 title = "Shisō no Senshi"
 
 [web.watcher]
 reload_html = true
-watch_path = ["src", "asseets"]
+watch_path = ["src", "assets"]
 
 [bundle]
 identifier = "Shiso-no-Senshi"

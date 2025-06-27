@@ -1,0 +1,223 @@
+@font-face {
+	font-family: NotoSans;
+	src: url('/assets/fonts/NotoSans.ttf');
+}
+
+@font-face {
+	font-family: NotoSerif;
+	src: url('/assets/fonts/NotoSerif.ttf');
+}
+
+@font-face {
+	font-family: NotoMono;
+	src: url('/assets/fonts/NotoMono.ttf');
+}
+
+:root {
+	--font-sans: NotoSans, sans-serif;
+	--font-serif: NotoSerif, serif;
+	--font-mono: NotoMono, monospace;
+}
+
+body {
+	font-family: var(--font-sans);
+
+	@media (prefers-color-scheme: light) {
+		background-color: var(--color-slate-100);
+	}
+	@media (prefers-color-scheme: dark) {
+		background-color: var(--color-black);
+	}
+}
+
+div#main {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+
+	margin: 0;
+	padding: 0;
+}
+
+header.app-header {
+	display: flex;
+	width: 100%;
+	margin-bottom: 0.25rem;
+	padding-bottom: 0.25rem;
+	padding-left: 1rem;
+
+	border-bottom-left-radius: 2rem;
+
+	@media (prefers-color-scheme: light) {
+		background-color: var(--color-indigo-100);
+		color: var(--color-amber-900);
+	}
+	@media (prefers-color-scheme: dark) {
+		background-color: var(--color-indigo-900);
+		color: var(--color-amber-100);
+	}
+
+	div.logo {
+		margin: 0.5rem;
+		flex-shrink: 1;
+	}
+
+	div.title {
+		margin-bottom: auto;
+		padding: 0.25rem;
+		padding-left: 2rem;
+		flex-grow: 1;
+
+		border-bottom-left-radius: 2rem;
+
+		vertical-align: middle;
+
+		font-size: x-large;
+		font-weight: bold;
+
+		@media (prefers-color-scheme: light) {
+			background-color: var(--color-slate-100);
+			color: var(--color-amber-900);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			background-color: var(--color-black);
+			color: var(--color-amber-100);
+		}
+	}
+}
+
+div.group {
+	header.header {
+		display: flex;
+		width: 100%;
+		gap: 0.25rem;
+
+		margin-left: 2rem;
+
+		div.tab {
+			display: flex;
+			width: 12rem;
+			min-width: 4rem;
+
+			border-top-left-radius: 1rem;
+			border-top-right-radius: 1rem;
+
+			padding: 0.25rem;
+			padding-left: 1rem;
+			padding-right: 0.5rem;
+
+			@media (prefers-color-scheme: light) {
+				background-color: var(--color-blue-500);
+				color: var(--color-amber-900);
+			}
+
+			@media (prefers-color-scheme: dark) {
+				background-color: var(--color-blue-900);
+				color: var(--color-amber-100);
+			}
+
+			div.title {
+				flex-grow: 1;
+				font-size: small;
+				font-weight: bold;
+			}
+
+			button.close-button {
+				flex-shrink: 1;
+				height: 1.1rem;
+				width: 1.1rem;
+
+				border-radius: 0.5rem;
+
+				font-size: x-small;
+				font-weight: bold;
+				vertical-align: middle;
+
+				border: solid 1px var(--color-blue-500);
+				background-color: inherit;
+
+				@media (prefers-color-scheme: light) {
+					color: var(--color-slate-900);
+				}
+
+				@media (prefers-color-scheme: dark) {
+					color: var(--color-slate-100);
+				}
+
+			}
+			button.close-button:hover {
+				background-color: rgba(255,255,255, 0.25);
+				@media (prefers-color-scheme: light) {
+					color: var(--color-slate-800);
+				}
+
+				@media (prefers-color-scheme: dark) {
+					color: var(--color-white);
+				}
+			}
+
+		}
+		div.tab:hover {
+			@media (prefers-color-scheme: light) {
+				background-color: var(--color-blue-400);
+				color: var(--color-amber-800);
+			}
+
+			@media (prefers-color-scheme: dark) {
+				background-color: var(--color-blue-800);
+			}
+		}
+
+		div.tab:active {
+			@media (prefers-color-scheme: light) {
+				background-color: var(--color-blue-300);
+			}
+
+			@media (prefers-color-scheme: dark) {
+				background-color: var(--color-blue-700);
+			}
+		}
+	}
+
+	div.panels {
+		@apply rounded-l-4xl mb-1 flex flex-col p-1 pl-4 pr-0;
+		@apply bg-blue-100;
+		@apply dark:bg-blue-900;
+
+		display: flex;
+		flex-direction: column;
+
+		border-top-left-radius: 2rem;
+		border-bottom-left-radius: 2rem;
+
+		padding: 0.25rem;
+		padding-left: 1rem;
+		padding-right: 0;
+
+		@media (prefers-color-scheme: light) {
+			background-color: var(--color-blue-300);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			background-color: var(--color-blue-700);
+		}
+		div.panel {
+			border-top-left-radius: 2rem;
+			border-bottom-left-radius: 2rem;
+
+			padding: 1rem;
+
+			@media (prefers-color-scheme: light) {
+				background-color: var(--color-slate-100);
+				color: var(--color-amber-900);
+			}
+
+			@media (prefers-color-scheme: dark) {
+				background-color: var(--color-black);
+				color: var(--color-slate-100);
+			}
+		}
+	}
+}
