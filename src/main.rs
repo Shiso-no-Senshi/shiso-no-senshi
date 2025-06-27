@@ -86,8 +86,6 @@ fn App() -> Element {
             sizes: "152x152",
             href: asset!("/assets/images/icon.152.png"),
         }
-        document::Stylesheet { href: asset!("/assets/styles/reset.css") }
-        document::Stylesheet { href: asset!("/assets/styles/colors.css") }
         document::Stylesheet { href: asset!("/assets/styles/app.css") }
 
         header { class: "app-header",

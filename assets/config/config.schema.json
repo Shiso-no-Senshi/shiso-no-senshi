@@ -1,0 +1,10 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$id": "https://shisonosenshi.org/schemas/config.schema.json",
+	"title": "Shisō no Senshi config schema",
+	"description": "Schema for the configuration file of Shisō no Senshi",
+	"type": "object",
+	"properties": {
+		"dataPath": {"type":"string","minLength":1}
+	}
+}

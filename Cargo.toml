@@ -1,6 +1,6 @@
 [package]
 name = "shiso-no-senshi"
-description = "a cross platform personal knowledge manager designed from the ground up to be secure and leave complete control of your knowledge in your hands"
+description = "A cross platform personal knowledge manager designed from the ground up to be secure and leave complete control of your knowledge in your hands"
 version = "0.1.0-alpha.1"
 authors = ["JEleniel <jeleniel@crystultima.org> (https://github.com/JEleniel)"]
 edition = "2024"
@@ -12,14 +12,17 @@ publish = false
 unsafe_code = "warn"
 
 [dependencies]
+config = { version = "0.15.11" }
 dioxus = { version = "0.6.3", features = [] }
-uuid = { version = "1.17.0", features = ["v4", "serde", "js"] }
+dirs = "6.0.0"
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1" }
+surrealdb = { version = "2.3.6", features = ["kv-mem", "kv-rocksdb"] }
+tokio = { version = "1.45.1", features = ["full"] }
+uuid = { version = "1.17.0", features = ["v4", "serde", "js"] }
 
 [features]
-default = ["web"]
-web = ["dioxus/web"]
+default = ["desktop"]
 desktop = ["dioxus/desktop"]
 mobile = ["dioxus/mobile"]
 
