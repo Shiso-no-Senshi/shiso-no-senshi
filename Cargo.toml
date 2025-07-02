@@ -16,7 +16,7 @@ serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1" }
 svg = "0.18.0"
 uuid = { version = "1.17.0", features = ["v4", "serde", "js"] }
-tokio = { version = "1.45.1", features = ["full"] }
+tokio = { version = "1.46.0", features = ["full"] }
 shiso-no-senshi-plugin-interface = { path = "plugins/interface" }
 
 [workspace.lints.rust]

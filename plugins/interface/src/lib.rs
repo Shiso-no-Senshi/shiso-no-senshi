@@ -1,8 +1,7 @@
-pub mod serde;
+pub mod message;
 
 use dioxus::prelude::*;
-
-pub  trait Editor {
+pub trait Editor {
     fn Editor(&self) -> Element;
 
     fn set_content(self: &mut Self, content: Vec<u8>);
@@ -21,7 +20,7 @@ pub trait Navigator {
     fn persist(location: &str, content: &Vec<u8>);
 }
 
-extern pub struct NavigateError {
+pub struct NavigateError {
     location: String,
     message: String,
 }
